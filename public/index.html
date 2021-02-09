@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="game"> </canvas>
+    <script type="module">
+      import Game from './core/Game'
+      import Root from './components/Root'
+      let assets = {
+        menu: {
+          background: './assets/menuBg.jpg',
+        },
+        gameCharacter: {
+          main: './assets/virus.png',
+        },
+        gameEntities: {
+          mutagen: './assets/flask.png',
+          dna: './assets/dna.png',
+        },
+      }
+
+      new Game('#game', assets, Root)
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+    </style>
+  </body>
+</html>
